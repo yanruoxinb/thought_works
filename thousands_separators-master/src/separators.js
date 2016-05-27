@@ -1,4 +1,6 @@
-function thousands_separators(num){ 
+'use strict';
+
+function thousands_separators(num) {
 	if(!/^(\+|-)?(\d+)(\.\d+)?$/.test(num)){ 
 		return num; 
  	} 
@@ -8,4 +10,7 @@ function thousands_separators(num){
  		b=b.replace(re,"$1,$2$3"); 
  	} 
 	return a +""+ b +""+ c; 
-} 
+  
+}
+
+module.exports = thousands_separators;
